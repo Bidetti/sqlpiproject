@@ -56,7 +56,6 @@ CREATE TABLE IF NOT EXISTS `user_informations` (
   `userPassword` varchar(22) NOT NULL,
   `userRank` varchar(14) NOT NULL DEFAULT 'ferro',
   `userPoints` int NOT NULL DEFAULT '0',
-  `userRanking` int DEFAULT NULL,
   `userPermission` varchar(14) NOT NULL DEFAULT 'user',
   `userStatus` varchar(14) NOT NULL DEFAULT 'false',
   PRIMARY KEY (`userID`),
@@ -65,16 +64,16 @@ CREATE TABLE IF NOT EXISTS `user_informations` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table piproject.user_informations: ~9 rows (approximately)
-INSERT INTO `user_informations` (`userID`, `userName`, `userPassword`, `userRank`, `userPoints`, `userRanking`, `userPermission`, `userStatus`) VALUES
-	(1, 'Bidetti', 'teste', 'ferro', 42, NULL, 'admin', 'false'),
-	(2, 'teste', 'st', 'ferro', 56, NULL, 'user', 'false'),
-	(3, 'test', '235z', 'ferro', 12, NULL, 'user', 'false'),
-	(4, '2ewadweqw', 'twewda', 'ferro', 41, NULL, 'user', 'false'),
-	(5, 's2341', 'eqweqw', 'ferro', 42, NULL, 'user', 'false'),
-	(6, 'Vitor', 'Senha...12321', 'ferro', 124, NULL, 'user', 'true'),
-	(7, 'rpd', '31', 'ferro', 23, NULL, 'user', 'false'),
-	(8, 'test1', 'test', 'ferro', 0, NULL, 'user', 'true'),
-	(9, 'teste12', 'teste', 'Diamante', 140, NULL, 'user', 'true');
+INSERT INTO `user_informations` (`userID`, `userName`, `userPassword`, `userRank`, `userPoints`, `userPermission`, `userStatus`) VALUES
+	(1, 'Bidetti', 'teste', 'ferro', 42, 'admin', 'false'),
+	(2, 'teste', 'st', 'ferro', 56, 'user', 'false'),
+	(3, 'test', '235z', 'ferro', 12, 'user', 'false'),
+	(4, '2ewadweqw', 'twewda', 'ferro', 41, 'user', 'false'),
+	(5, 's2341', 'eqweqw', 'ferro', 42, 'user', 'false'),
+	(6, 'Vitor', 'Senha...12321', 'ferro', 124, 'user', 'true'),
+	(7, 'rpd', '31', 'ferro', 23, 'user', 'false'),
+	(8, 'test1', 'test', 'ferro', 0, 'user', 'true'),
+	(9, 'teste12', 'teste', 'Diamante', 140, 'user', 'true');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
