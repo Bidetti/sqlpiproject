@@ -1,22 +1,4 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               8.0.29 - MySQL Community Server - GPL
--- Server OS:                    Win64
--- HeidiSQL Version:             12.0.0.6468
--- --------------------------------------------------------
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-
--- Dumping database structure for piproject
-CREATE DATABASE IF NOT EXISTS `piproject` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `piproject`
 USE `piproject`;
 
 -- Dumping structure for table piproject.questions
@@ -49,7 +31,6 @@ INSERT INTO `questions` (`questionID`, `question`, `answerA`, `answerB`, `answer
 	(14, 'O que é impresso pelo trecho de código a seguir?<br>\r\numa_lista = [1, 3, 5]<br>\r\nprint(uma_lista * 3)', '[1, 3, 5, 1, 3, 5, 1, 3, 5]', '[1, 1, 1, 3, 3, 3, 5, 5, 5]', '[3, 9, 15]', '[1, 3, 5, 3]', 'A'),
 	(15, 'Quantas vezes a letra `A` é impressa pelos seguintes comandos?<br>\r\nfrase = `Vou arrasar na prova!`<br>\r\nfor i in range(len(frase)):<br>\r\nif i % 2 == 0:<br>\r\n   print(frase[i])', '0', '1', '2', '3', 'B');
 
--- Dumping structure for table piproject.user_informations
 CREATE TABLE IF NOT EXISTS `user_informations` (
   `userID` int NOT NULL AUTO_INCREMENT,
   `userName` varchar(22) NOT NULL,
@@ -64,7 +45,6 @@ CREATE TABLE IF NOT EXISTS `user_informations` (
   UNIQUE KEY `userName` (`userName`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table piproject.user_informations: ~9 rows (approximately)
 INSERT INTO `user_informations` (`userID`, `userName`, `userPassword`, `userRank`, `userPoints`, `userRanking`, `userPermission`, `userStatus`) VALUES
 	(1, 'Bidetti', 'teste', 'ferro', 42, NULL, 'admin', 'false'),
 	(2, 'teste', 'st', 'ferro', 56, NULL, 'user', 'false'),
@@ -75,9 +55,3 @@ INSERT INTO `user_informations` (`userID`, `userName`, `userPassword`, `userRank
 	(7, 'rpd', '31', 'ferro', 23, NULL, 'user', 'false'),
 	(8, 'test1', 'test', 'ferro', 0, NULL, 'user', 'true'),
 	(9, 'teste12', 'teste', 'Diamante', 140, NULL, 'user', 'true');
-
-/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
