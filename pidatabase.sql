@@ -35,7 +35,6 @@ CREATE TABLE IF NOT EXISTS `user_informations` (
   `userPassword` varchar(22) NOT NULL,
   `userRank` varchar(14) NOT NULL DEFAULT 'ferro',
   `userPoints` int NOT NULL DEFAULT '0',
-  `userRanking` int DEFAULT NULL,
   `userPermission` varchar(14) NOT NULL DEFAULT 'user',
   `userStatus` varchar(14) NOT NULL DEFAULT 'false',
   PRIMARY KEY (`userID`),
